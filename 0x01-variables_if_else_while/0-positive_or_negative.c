@@ -2,7 +2,7 @@
 #include <time.h>
 /* more headers goes there */
 #include <stdio.h>
-/* betty style doc for function main goes there */
+/* 0-positive_or_negative.c */
 int main(void)
 {
 	int n;
@@ -12,15 +12,15 @@ int main(void)
 	/* your code goes there */
 	if (n > 0)
 	{
-		printf("The number is positive \n");
+		printf("Is positive \n");
 	}
 	else if (n < 0)
 	{
-		printf("The number is negative \n");
+		printf("Is negative \n");
 	}
 	else
 	{
-		printf("The number is zero \n");
+		printf("Is zero \n");
 	}
 	return (0);
 }
