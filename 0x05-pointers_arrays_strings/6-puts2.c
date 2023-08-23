@@ -17,7 +17,7 @@ void puts2(char *str)
 		y++;
 		len++;
 	}
-	m = len - 1
+	m = len - 1;
 	for (n = 0; n <= m; n++)
 	{
 		if (n % 2 == 0)
@@ -25,5 +25,5 @@ void puts2(char *str)
 		_putchar(str[n]);
 	}
 	}
-	_putchar('/n);
+	_putchar('/n');
 }
