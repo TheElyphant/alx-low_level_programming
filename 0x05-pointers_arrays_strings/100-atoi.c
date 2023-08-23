@@ -37,5 +37,5 @@ int _atoi(char *s)
 		m++;
 	}
 	if (p == 0)
-		return (0);
+		return (o);
 }
