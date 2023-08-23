@@ -30,7 +30,7 @@ int _atoi(char *s)
 				digit = -digit;
 			o = o * 10 + digit;
 			p = 1;
-			if (s[m + 1] < '0' || s[m + 1] > '9'
+			if (s[m + 1] < '0' || s[m + 1] > '9')
 				break;
 			p = 0;
 		}
