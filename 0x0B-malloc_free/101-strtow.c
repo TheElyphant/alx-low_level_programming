@@ -38,9 +38,10 @@ char **strtow(char *str)
 		if (words[word_index] == NULL)
 		{
 			for (i = 0; i < word_index; i++)
-			{
+			{				
 				free(words[i]);
 			}
+			free(words);
 			return (NULL);
 		}
 		token = strtok(NULL, " \t\n");
