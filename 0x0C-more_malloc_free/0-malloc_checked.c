@@ -18,3 +18,14 @@ void *malloc_checked(unsigned int b)
 	}
 	return (ptr);
 }
+/**
+* main - allocate memory of 1024
+* Return: 0
+*/
+int main(void)
+{
+	char *myArray = (char *)malloc_checked(sizeof(char) * 1024);
+
+	free(myArray);
+	return (0);
+}
