@@ -12,7 +12,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (!d)
 	{
-		printf("Error: Provided pointer is NULL.\n");
+		printf("Error: Provided pointer is NULL. Cannot initialize the dog struct.\n");
 		return;
 	}
 	d->name = name;
