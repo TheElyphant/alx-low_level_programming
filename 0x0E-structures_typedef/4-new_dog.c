@@ -2,6 +2,30 @@
 #include <string.h>
 #include "dog.h"
 /**
+* my_strdup - duplicsate strin
+* strlen - length of string
+* strcpy - copy the string
+* @str: string input
+* Return: newStr
+*/
+char *my_strdup(const char *str)
+{
+	char *newStr;
+
+	if (!str)
+	{
+		return (NULL);
+	}
+
+	newStr = (char *)malloc(strlen(str) + 1);
+	if (!newStr)
+	{
+		return (NULL);
+	}
+	strcpy(newStr, str);
+	return (newStr);
+}
+/**
 * *new_dog - creates a new dog.
 * @name: new name
 * @age: new age
