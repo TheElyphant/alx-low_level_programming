@@ -17,5 +17,12 @@ void print_name_callback(char *name)
 */
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (f != NULL)
+	{
+		f(name);
+	}
+	else
+	{
+		printf("Callback function is NULL\n");
+	}
 }
