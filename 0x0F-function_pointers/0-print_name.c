@@ -1,28 +1,15 @@
 #include <stdio.h>
 #include "function_pointers.h"
 /**
-* print_name_callback - callback function that prints name.
+* print_name - print name with pointer function.
 * @name: the name
+* @f: pointer to function
 * Return: Nothing
-*/
-void print_name_callback(char *name)
-{
-		printf("Hello, %s!\n", name);
-}
-/**
-* print_name - print the name
-* @name: the name
-* @f: pointer
-* Return: 0
 */
 void print_name(char *name, void (*f)(char *))
 {
-	if (f != NULL)
-	{
-		f(name);
-	}
-	else
-	{
-		printf("Callback function is NULL\n");
-	}
+	if (name == NULL || f == NULL)
+		return;
+
+	f(name);
 }
