@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* before_main - print desired text.
+* construction - print desired text.
 * Return: 0
 */
 void construction(void) __attribute__((constructor));
