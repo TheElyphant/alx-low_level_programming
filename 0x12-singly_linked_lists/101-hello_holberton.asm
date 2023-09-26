@@ -1,16 +1,16 @@
 section .data
-	hello db "Hello, Holberton", 0
-	format db "%s", 0
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-section .text
+	SECTION .text
 	global main
 	extern printf
 
 main:
-	push rbp
-	mov rdi, format
-	mov rax, 0
-	lea rsi, [rel hello]
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
 	call printf
-	pop rbp
+
+	mov eax, 0
 	ret
