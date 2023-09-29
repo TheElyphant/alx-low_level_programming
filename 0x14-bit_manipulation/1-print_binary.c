@@ -7,20 +7,9 @@
 */
 void print_binary(unsigned long int n)
 {
-	int shift;
-
-	if (n == 0)
+	if (n > 1)
 	{
-		printf("0\n");
-		return;
+		print_binary(n >> 1);
 	}
-	shift = sizeof(unsigned long int) * 8 - 1;
-
-	while (!(n & (1UL << shift)))
-		shift--;
-
-	for (; shift >= 0; shift--)
-		printf("%ld", (n >> shift) & 1);
-
-	printf("\n");
+	putchar((n & 1) ? '1' : '0');
 }
