@@ -42,10 +42,13 @@ int main(int argc, char *argv[])
 		close_elf(fd);
 		exit(98);
 	}
-	check_elf(elf_header.e_ident);
+	check_elf(elf_header->e_ident);
 	printf("ELF Header; \n");
+	print_magic(header->e_ident);
+	print_class(header->e_ident);
 	print_elf_header_info(&elf_header);
 
+	free(elf_header);
 	close_elf(fd);
 	return (0);
 }
